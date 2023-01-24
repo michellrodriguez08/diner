@@ -13,11 +13,11 @@ require_once ('vendor/autoload.php');
 $f3 = Base::instance();
 
 //Define a default route (328/diner)
-$f3->route('GET /', function() {
+$f3->route('GET /breakfast', function() {
 
     //Instantiate a view
     $view = new Template();
-    echo $view->render("views/diner-home.html");
+    echo $view->render("views/breakfast.html");
 });
 
 //Run Fat Free
