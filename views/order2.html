@@ -1,4 +1,4 @@
-orderform2
+<!--orderform2-->
 <!-- breakfast.html -->
 
 <include href="views/header.html"></include>
@@ -9,19 +9,25 @@ orderform2
     <h2>Order Part 2</h2>
 
     <form action="#" method="post" class="form-horizontal">
-
+<!--         move label over here-->
 
         <br>
 
-        <!-- get meal -->
+        <!-- get condiments -->
         <div class="form-group">
             <label class="col-sm-4 control-label">Select your Condiments</label>
+            <br>
+
             <div class="col-sm-4">
                 <repeat group="{{ @condiments }}" value="{{ @condiment }}">
                     <label><input type="checkbox" name="conds[]" value="{{ @condiment }}"> {{ ucfirst(@condiment) }}</label><br>
                 </repeat>
-
             </div>
+
+<!--            &lt;!&ndash; Display an error if there is one &ndash;&gt;-->
+<!--            <check if="{{ isset(@errors['cond']) }}">-->
+<!--                <span class="err">{{ @errors['cond'] }}</span>-->
+<!--            </check>-->
         </div>
         <br>
 
