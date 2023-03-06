@@ -1,8 +1,7 @@
 <?php
-
 /**
  * Order class represents an order from my diner
- * @Michell Rodriguez
+ * @Tina Ostrander
  */
 
 class Order
@@ -11,11 +10,11 @@ class Order
     private $_meal;
     private $_condiments;
 
-    function __construct()
+    function __construct($food="", $meal="", $condiments="")
     {
-        $this->_food = "";
-        $this->_meal = "";
-        $this->_condiments = "";
+        $this->_food = $food;
+        $this->_meal = $meal;
+        $this->_condiments = $condiments;
     }
 
     /**
@@ -36,9 +35,8 @@ class Order
         $this->_food = $food;
     }
 
-
     /**
-     * getMeal returns the meal item ordered
+     * getMeal returns the meal ordered
      * @return string
      */
     public function getMeal()
@@ -47,7 +45,7 @@ class Order
     }
 
     /**
-     * setMeal sets a meal item in the order
+     * setMeal sets a meal in the order
      * @param string
      */
     public function setMeal($meal)
@@ -56,7 +54,7 @@ class Order
     }
 
     /**
-     * getFood returns the food item ordered
+     * getCondiments returns the condiments
      * @return string
      */
     public function getCondiments()
@@ -65,7 +63,7 @@ class Order
     }
 
     /**
-     * setFood sets a food item in the order
+     * setCondiments sets a meal in the order
      * @param string
      */
     public function setCondiments($condiments)
